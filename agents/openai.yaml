@@ -1,0 +1,4 @@
+interface:
+  display_name: "Retro Demo Creator"
+  short_description: "Browser demos inspired by C64, Amiga, and other home computers"
+  default_prompt: "Use $create-retro-demo to create a retro demo. Ask me about effects, runtime, and demo parts, discuss the ending separately, and show me a timed running order before implementation."
