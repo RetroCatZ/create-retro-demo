@@ -9,7 +9,7 @@ Carry forward known answers. Ask in manageable rounds and explain unfamiliar dem
 3. **Runtime and structure:** Full track, excerpt, or fixed duration? Measure a supplied track; do not estimate duration from file size. Ask about fade/loop, number and character of **parts**, scenes within parts, and calm versus fast pacing. Offer jumps to part starts for seekable multipart browser demos.
 4. **Remaining implementation choices:** Ask only unresolved questions about fidelity, splash screen, and settings. Explain defaults from SKILL.md as proposals.
 
-The conversation language does not determine demo language. Demo text, scrollers, menus, and Effect info default to English unless explicitly changed. For vague preferences, offer two or three concrete options. If the user says “you decide,” propose a plan for review; an express request for immediate implementation may skip that review.
+The conversation language does not determine demo language. Demo text, scrollers, menus, and Effect info default to English unless explicitly changed. For vague preferences, offer two or three concrete options. 
 
 ## Ask about the final part separately
 
