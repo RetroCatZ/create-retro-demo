@@ -32,7 +32,9 @@ Present a compact table:
 | … | … | … | … | … | … |
 | Final part | `…–end` | … | Agreed climax | Named effects | Final image/fade/loop |
 
-Cover the chosen total duration without gaps. For a whole track, use its measured length. Allow for greetings to be read and each scroller to exit. Identify the distinct main effect of each part and compare near-duplicate scenes. Record every logo appearance, including small variants: screen area, entry, exit, location, and duration. Briefly classify effects as early, transitional, or late and state important fidelity deviations. Ask what the user wants changed and wait for feedback or approval before coding. Update times and total duration after revisions.
+Cover the chosen total duration without gaps. For a whole track, use its measured length. Allow for greetings to be read and each scroller to exit. Identify the distinct main effect of each part and compare near-duplicate scenes. Record every logo appearance, including small variants: screen area, entry, exit, location, and duration. Briefly classify effects as early, transitional, or late and state important fidelity deviations.
+
+Before implementation, consolidate decisions from the **whole user interaction** in the demo project's `requirements.md`: content, platform/era and fidelity, music/runtime, asset sources and appearances, text, timed parts and scenes, effects and transitions, controls, delivery, technical constraints, exclusions, assumptions, unresolved questions, and acceptance criteria. Attribute user choices accurately; distinguish them from agent proposals. The document may be detailed, but always show a simpler timed running order in conversation and offer the full file on request. Ask what to change; revise both the file and summary before the user decides whether implementation may begin. After approval, leave the baseline intact and use `requirements-changes.md` for subsequent decisions as directed by SKILL.md.
 
 ## Distinguish music choices
 

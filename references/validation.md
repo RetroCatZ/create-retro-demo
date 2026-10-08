@@ -4,6 +4,8 @@
 
 Check only implemented features, but test the **complete run** for a new demo.
 
+**Preimplementation gate:** Verify that `requirements.md` was saved in the demo project before feature code was written, captures decisions from the entire interaction without inventing answers, and contains the timed parts/scenes, exclusions, assumptions, open questions, and acceptance criteria. Verify that the user saw a simpler running order and decided to proceed. If requirements changed during or after implementation, check that `requirements-changes.md` records each change against the preserved approved baseline, with its date, old/new decision, source/reason, affected parts/timing/files, and status; material creative changes require a user decision before implementation.
+
 1. Fresh-session load, user-gesture start, audio denial/error, silent retry, and promised `file://` or server launch. Confirm offline packaging if promised.
 2. Each splash option has an actual effect. Check return to settings, pause/resume, restart, mute, volume, fullscreen, keyboard, and narrow/wide layouts. Repeated starts must not duplicate audio.
 3. Match scene transitions, text run-out, background-tab behavior, and audio/visual sync at start, after pause/seek, and at loop/end.
@@ -27,6 +29,7 @@ Do not confuse “the player reports playback” with listening to the music. Re
 | Late C64 “as in 1991” | Verify precise historical timing before using modern record effects. |
 | Early/Late switch | Implement two visibly different effect/scene variants, not a label or filter. |
 | Party demo with MP3, logo, and greetings | Ask about effects/runtime/parts; discuss the ending separately; present an editable timed plan; do not synthesize music unasked. |
+| Plan revised during or after coding | Preserve the approved `requirements.md`; log the decision in `requirements-changes.md` and obtain review before material creative changes. |
 | Long six-part C64 demo | Show part boundaries and seekable jumps with synchronized audio, scene, scroller, and pause state. |
 | Tiny retro intro | Still provide toggled technical baseline Effect info; default demo UI language is English. |
 | Native C64 program or original in emulator | Use a distinct development path; never substitute a browser recreation. |
