@@ -5,7 +5,7 @@
 Carry forward known answers. Ask in manageable rounds and explain unfamiliar demoscene terms by what viewers will see. “Late era” alone does not determine effects or pacing.
 
 1. **Purpose and material:** Occasion, mood, machine/era, logo, images, greetings, and other text.
-2. **Effects:** Offer a short menu from [effects and eras](epochs.md). For a late C64 demo, this might include raster bars, starfield, plasma, sprites, a sine/DYCP-style scroller, and pixel art. Ask which are essential or unwanted. Distinguish main attractions from backgrounds. For logo and recurring motifs, ask frequency, scale, role, entry/exit, placement, and duration so they do not hide effects.
+2. **Effects:** Offer a short menu from [effects and eras](epochs.md). For a late C64 demo, this might include raster bars, starfield, plasma, sprites, a sine/DYCP-style scroller, and pixel art. Ask which are essential or unwanted. Distinguish main attractions from backgrounds. For each prominent character, record the intended silhouette, identifying props, color treatment, and animation restraint; use the witch calibration in `epochs.md` as a style example, not a fixed asset. For logo and recurring motifs, ask frequency, scale, role, entry/exit, placement, and duration so they do not hide effects.
 3. **Runtime and structure:** Full track, excerpt, or fixed duration? Measure a supplied track; do not estimate duration from file size. Ask about fade/loop, number and character of **parts**, scenes within parts, and calm versus fast pacing. Offer jumps to part starts for seekable multipart browser demos.
 4. **Remaining implementation choices:** Ask only unresolved questions about fidelity, splash screen, and settings. Explain defaults from SKILL.md as proposals.
 
