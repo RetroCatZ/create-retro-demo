@@ -47,9 +47,12 @@ Choose mostly simpler implementations for early demos; add transitional techniqu
 
 **Reusable C64 rasterbar color example:** Call this a *dithered rasterbar color ramp* or *dithered rasterbar colour table*: neighboring palette indices alternate on successive raster lines to soften each step, and the dark-to-white sequence mirrors back to dark. One author calls this line pattern “Poor Man's Dithering.” [C13] Adapt this illustrative blue table to the intended palette and bar height; it is not a canonical color order or proof of real VIC-II raster timing.
 
-```js
+const C64_RASTER_COLORS = {
+  0:"#0b0b20", 1:"#f3f3f3", 3:"#70d7d0", 4:"#a45fc5",
+  6:"#344fba", 7:"#ded073", 10:"#e48f9f", 11:"#585858", 14:"#83a8e8"
+};
+
 const RASTER_BLUE = [0,6,0,6,6,14,6,14,14,3,14,3,3,1,3,1,1,1,3,1,3,3,14,3,14,14,6,14,6,6,0,6,0];
-```
 
 ### Executing a late C64 demo
 
