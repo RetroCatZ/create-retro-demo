@@ -7,7 +7,7 @@ description: Create or revise browser-based retro demos inspired by early or lat
 
 ## Defaults
 
-Honor explicit user choices. Otherwise use a browser demo, Amiga 500 for an unspecified “Amiga,” NTSC where applicable, loosely inspired fidelity, local HTML/assets, a configurable splash screen, and **English** on-screen text, scrollers, menus, and effect information. Ask the user to choose an early or late style and the music. Native output or an original binary in an emulator is a separate development path; do not substitute a browser recreation or claim native compatibility.
+Honor explicit user choices. Otherwise use a browser demo, Amiga 500 for an unspecified “Amiga,” NTSC where applicable, loosely inspired fidelity, local HTML/assets, a configurable splash screen, and **English** on-screen text, scrollers, menus, and effect information. Precede the splash screen and demo with a short, recognizable startup sequence for the selected computer: C64 BASIC loading for C64 demos, an appropriate Amiga Workbench for Amiga demos, and a platform-appropriate start for other systems. Show the demo being launched; see [browser implementation](references/browser.md). Ask the user to choose an early or late style and the music. Native output or an original binary in an emulator is a separate development path; do not substitute a browser recreation or claim native compatibility.
 
 ## Workflow
 

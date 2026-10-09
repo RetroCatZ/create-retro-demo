@@ -15,7 +15,7 @@ These rules apply to new and existing browser retro demos. Keep tiny intros simp
 
 ## Document historical techniques (required)
 
-For each significant effect, explain in comments, effect metadata, or developer notes:
+Every demo has a keyboard-accessible **Developer info** toggle, closed by default and available during playback. For each significant effect, explain in Developer Info:
 
 1. What viewers see or hear.
 2. The original chip/hardware principle and important limit, including PAL/NTSC where relevant.
