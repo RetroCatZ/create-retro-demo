@@ -45,6 +45,12 @@ Choose mostly simpler implementations for early demos; add transitional techniqu
 | FPP / stretcher, twister, wave carpet | Late | Demanding raster/display manipulation; name the actual variant and period. [C1] |
 | Dot vectors, filled vectors, 3D scenes | Transitional → late | Few dots lean transitional; complex filled scenes are late. Drive-assisted computation needs its own profile disclosure. [C1] |
 
+**Reusable C64 rasterbar color example:** Call this a *dithered rasterbar color ramp* or *dithered rasterbar colour table*: neighboring palette indices alternate on successive raster lines to soften each step, and the dark-to-white sequence mirrors back to dark. One author calls this line pattern “Poor Man's Dithering.” [C13] Adapt this illustrative blue table to the intended palette and bar height; it is not a canonical color order or proof of real VIC-II raster timing.
+
+```js
+const RASTER_BLUE = [0,6,0,6,6,14,6,14,14,3,14,3,3,1,3,1,1,1,3,1,3,3,14,3,14,14,6,14,6,6,0,6,0];
+```
+
 ### Executing a late C64 demo
 
 - **Characters and sprite art:** Design a prominent figure in three passes: (1) a silhouette and characteristic prop recognizable at actual output size, (2) a few clustered color areas that separate face, clothing, and prop, and (3) only the highlights or animation frames that remain legible in motion. The witch example is a pointed hat, broom, face/hair, and cloak, with restrained two-tone shading and a small two-frame change. A triangle-and-stick outline is too generic; gradients, intricate fabric trim, and tiny details that disappear at display size are too illustrative for this target. The 48×36 browser composition used for that example is a style reference, **not** a native C64 sprite specification or a mandatory size/color budget. Inspect both a still frame and motion at 1× output size before accepting the art. Historical multicolor sprites trade horizontal resolution for color (12×21 double-width pixels versus 24×21 in hires); describe a larger or richer browser figure as a possible multi-element composition, not one native sprite. [C5, C10]
@@ -109,6 +115,7 @@ Research date: 8 October 2026. Favor author articles, original manuals, firsthan
 - **C10:** [C64 Programmer's Reference Guide: Sprites](https://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_3/page_133.html), original-manual mirror; sprite format and multicolor resolution.
 - **C11:** [Codebase64: Overlapping Raster Bars](https://codebase.c64.org/doku.php?id=base:overlapping_raster_bars), author code with a per-line color table; intentional C64 color choices, not a universal palette.
 - **C12:** Original C64 Programmer's Reference Guide mirrors: [hires bitmap](https://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_3/page_121.html) and [multicolor bitmap](https://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_3/page_127.html); resolution and color limits.
+- **C13:** [Daniel Krajzewicz: Stretching the C64 Palette](https://www.krajzewicz.de/blog/stretching-the-c64-palette.php), author analysis of rasterbar gradients and line-by-line “Poor Man's Dithering”; terminology and example pattern, not a required palette.
 - **A1:** [Commodore Hardware Manual: About the Copper](https://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0048.html), original manual mirror.
 - **A2:** [Commodore Libraries Manual: Simple Hardware Sprites](https://amigadev.elowar.com/read/ADCD_2.1/Libraries_Manual_guide/node0379.html) and [Bobs](https://amigadev.elowar.com/read/ADCD_2.1/Libraries_Manual_guide/node0395.html), original distinction between Blitter objects and hardware sprites.
 - **A3:** [Commodore Hardware Manual: Dual Playfield Control](https://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node007B.html), original capability.
