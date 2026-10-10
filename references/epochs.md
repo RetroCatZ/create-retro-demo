@@ -1,49 +1,62 @@
 # Effects and eras
 
-Sections: [selection](#selection-rules) · [C64](#c64) · [Amiga](#amiga-500-and-amiga-1200) · [presenting suggestions](#presenting-suggestions) · [sources](#sources-and-limits-of-claims)
+Sections: [selection](#selection-rules) · [C64 three-phase brief](#c64-three-phase-brief) · [C64 techniques](#c64-techniques) · [Amiga](#amiga-500-and-amiga-1200) · [presenting suggestions](#presenting-suggestions) · [sources](#sources-and-limits-of-claims)
 
 ## Selection rules
 
-Offer two creative directions:
+For C64, use the three named phases below. For Amiga and other machines, use their own periods and capabilities; the C64 year boundaries do not transfer to them.
 
-- **Early / simple:** Intro-like fixed composition, few layers, a straight scroller, simple logo, restrained motion, and manageable color changes. Choose roughly two or three effects. Simplicity must not mean unreliable playback.
-- **Late / polished:** Composed scenes, more varied effects, complex motion, transitions, and musical synchronization. Choose demanding techniques appropriate to the actual machine; merely adding particles or modern shaders is insufficient.
+Classify the **desired look and effect ambition** first. A production's release date is evidence about its period, not an automatic style selection. A new demo may deliberately imitate 1984; an old effect may be reused in a modern composition. Record a dominant phase and name any intentional cross-phase elements. Keep this independent of browser-versus-native delivery, hardware fidelity, and PAL/NTSC.
 
-**Early / transitional / late** describes suitability of a particular implementation. Transitional is useful for overlaps, not a required third user mode. An early classic may still appear in late demos. A pioneering early effect may be too elaborate for an intentionally plain early intro.
+Within technique histories, “transitional” describes overlap between periods, not a fourth user-facing C64 phase. A pioneering early use does not make a difficult effect a default for an intentionally simple early demo.
 
 These labels and date ranges are editorial design guidance, not a universal taxonomy or verified list of first appearances. Sources support techniques and selected historical anchors, not an invention date for every row. Never infer a “world first” from archive comments. Check original productions if a specific year matters.
 
-| Profile | Early orientation | Late orientation |
+| Profile | Early orientation | Later historical orientation |
 |---|---|---|
-| C64 | Intro aesthetics around 1983–1986; experiments as transitional | Mature productions from about 1989/1990, including later 1990s |
+| C64 | Simple intro aesthetics through 1990 inclusive | Late/advanced phase from 1991 through 2000 inclusive; Modern Times from 2001 onward is a separate phase below |
 | Amiga 500 / OCS | Simple intros around 1987–1989 | OCS trackmos and complex demos around 1991–1994 |
 | Amiga 1200 / AGA | Early AGA period around 1992–1994 | Mature AGA productions around the mid-to-late 1990s |
 
-An “early A1200” demo means early AGA, not an A1200 production in the 1980s. Treat modern record-setting work on old hardware as another reference era, not automatically representative of 1993.
+An “early A1200” demo means early AGA, not an A1200 production in the 1980s. Treat modern record-setting work on old hardware as another reference era, not automatically representative of 1993 or the C64's late phase.
 
 Separate era from hardware fidelity. Browser effects reproduce appearances, not proof of historical implementation. A strict profile must respect resolution, color, memory, and runtime limits. “Late” does not silently permit AGA on A500 or Fast RAM, FPU, or an accelerator on A1200. Disclose departures in loosely inspired work.
 
 Use NTSC by default. Many European originals target PAL; their existence does not establish NTSC compatibility. Check actual timing for strict fidelity.
 
-## C64
+## C64 three-phase brief
 
-Choose mostly simpler implementations for early demos; add transitional techniques deliberately.
+Use these three **design targets** with the agreed reference windows, not as a universal demoscene chronology or asserted invention dates. Honor an explicit Early, Late, or Modern Times choice. For an unresolved “retro C64” request, offer the three choices in plain visual terms. If they supplied a clear reference, infer the fitting phase, state it as a proposal, and ask only if uncertainty matters.
+
+| Target phase | Reference period | Look and structure | Effect scope and planning |
+|---|---|---|---|
+| **Early / technically simple** | Through **1990 inclusive** | Intro-like composition: static or simply moved logo, direct color blocks, one readable straight scroller, sparse layering. Short, clearly separated visual ideas. | Roughly two or three modest effects such as simple raster color changes, a sparse starfield, or a few sprites on predictable paths. Avoid making FLI, dense multiplexing, plasma, FPP, or complex distortion the default. A historically pioneering trick is possible if explicitly chosen and feasible. |
+| **Late / technically advanced** | **1991–2000 inclusive** | More developed parts, custom graphics and lettering, varied scrollers, deliberately composed transitions, and tighter music cues. Preserve the visual language of the chosen reference year when one is given. | Choose a feasible subset of more demanding C64 techniques: FLD, DYCP, border work, sprite multiplexing, FLI, plasma, FPP-style manipulation, or vectors where appropriate to the specific year and implementation. Do not promise all of them in one scene or imply each was common throughout the whole period. |
+| **Modern Times / latest effects and storyboards** | **2001 onward**, emphasizing current references | Storyboard-led productions with distinct scene identities, current ambitious effects, strong art direction, optional recurring motifs, integrated typography, expressive transitions, and music-led pacing. Use [modern C64 examples](modern-c64-examples.md) to calibrate the composition. | Plan each hero effect with a scene card, technical feasibility tier, prototype, and fallback. Combine ambitious graphics, distortion, geometry, and raster-style composition only within the selected hardware or browser-fidelity profile. Modern style does not silently grant extra RAM, faster CPU, more sprite channels, or a modern shader as proof of native C64 execution. |
+
+Record in `requirements.md`: selected phase; any more precise reference year or production; three to five visible traits that define the target look; selected hero and supporting effects; excluded effects; intentional cross-phase elements; hardware/fidelity profile; and what can be verified. In the running order, tag each part's main effect with its chosen phase fit. If the user requests an effect that conflicts with a strict historical target, explain the conflict and offer a dated alternative or an explicit hybrid before coding.
+
+## C64 techniques
+
+For Early, prefer simple implementations even though the window extends through 1990. Some advanced techniques already existed before that cutoff; their Late/Modern Times fit below expresses intended complexity, not a claim that they first appeared after 1990. Add them to Early only as deliberate exceptions. The phase-fit column describes a useful design choice, not the first appearance of each technique.
 
 | Effect | Fit | Selection and development |
 |---|---|---|
-| Straight 1×1 / 2×2 scroller | Early → late | Good intro component. In a longer late demo switch later to a sine/DYCP-style, multilayer, or perspective scroller. Repeating the same straight text line throughout resembles an early intro. [C1, C4] |
-| Raster bars and color cycling | Early → late | Few bars early; denser combinations later. Compose a color table per raster line with neighboring dark, mid, and bright colors and a brighter center; do not merely repeat a wide short pattern. There is no single canonical color order. [C1, C11] |
-| Starfield | Early → late | Sparse points early; depth, tunnels, and layering increase complexity. [C1] |
-| Sprite sine motion / moving logo | Early → transitional | Few objects on simple paths early; identify more complex reuse explicitly. [C1, C5] |
-| More than eight sprites in a frame | Transitional → late | Sprite multiplexing reuses eight hardware channels at different heights. It cannot put arbitrarily many overlapping sprites on one raster line; it is not solely a late invention. [C5] |
-| Open borders | Early as pioneering trick / transitional → late | Distinguish top/bottom border opening from side borders. Honey recalls side-border sprites in early 1986. Optional for a simple early intro; later work may build elaborate border compositions. Not an ordinary unrestricted fullscreen mode. [C6] |
-| FLD (Flexible Line Distance) | Transitional → late | Alters character-row spacing and displaces content below. Simple FLD can suit advanced early work; JCB describes an FLD routine connected with his 1987 VSP discovery. [C2, C7] |
-| DYCP (Different Y Character Position) | Transitional → late | Individually displaces characters vertically; not every wavy text strip is authentic DYCP. [C4] |
-| TechTech / line-based distortion | Transitional → late | Offsets graphics by line; larger compositions are more demanding. [C1] |
-| FLI (Flexible Line Interpretation) | Late | Repeatedly fetches color information for more flexible per-line assignments; it does not extend the 16-color palette. Early FLI principles are documented around 1989, but first authorship is contested. Not a default for a plain early intro. [C3, C8] |
-| Plasma | Late | Distinguish color cycling, character-set, and FLI variants. Coarse blocks can be highly optimized late effects; low resolution is not automatically early. [C1, C9] |
-| FPP / stretcher, twister, wave carpet | Late | Demanding raster/display manipulation; name the actual variant and period. [C1] |
-| Dot vectors, filled vectors, 3D scenes | Transitional → late | Few dots lean transitional; complex filled scenes are late. Drive-assisted computation needs its own profile disclosure. [C1] |
+| Straight 1×1 / 2×2 scroller | All three; defining early element | Good intro component. In a longer late or modern demo switch later to a sine/DYCP-style, multilayer, or perspective scroller. Repeating the same straight text line throughout resembles an early intro. [C1, C4] |
+| Raster bars and color cycling | All three; complexity varies | Few bars early; denser combinations later. Compose a color table per raster line with neighboring dark, mid, and bright colors and a brighter center; do not merely repeat a wide short pattern. There is no single canonical color order. [C1, C11] |
+| Starfield | All three; complexity varies | Sparse points early; depth, tunnels, and layering increase complexity. [C1] |
+| Sprite sine motion / moving logo | Early simple; Late/Modern Times elaborate | Few objects on simple paths early; identify more complex reuse explicitly. [C1, C5] |
+| More than eight sprites in a frame | Late/Modern Times; earlier pioneering use possible | Sprite multiplexing reuses eight hardware channels at different heights. It cannot put arbitrarily many overlapping sprites on one raster line; it is not solely a modern invention. [C5] |
+| Open borders | Late/Modern Times; early pioneering use possible | Distinguish top/bottom border opening from side borders. Honey recalls side-border sprites in early 1986. Optional for a simple early intro; later work may build elaborate border compositions. Not an ordinary unrestricted fullscreen mode. [C6] |
+| FLD (Flexible Line Distance) | Late/Modern Times; earlier pioneering use possible | Alters character-row spacing and displaces content below. Simple FLD can suit advanced early work; JCB describes an FLD routine connected with his 1987 VSP discovery. [C2, C7] |
+| DYCP (Different Y Character Position) | Late/Modern Times | Individually displaces characters vertically; not every wavy text strip is authentic DYCP. [C4] |
+| TechTech / line-based distortion | Late/Modern Times | Offsets graphics by line; larger compositions are more demanding. [C1] |
+| FLI (Flexible Line Interpretation) | Late/Modern Times | Repeatedly fetches color information for more flexible per-line assignments; it does not extend the 16-color palette. Early FLI principles are documented around 1989, but first authorship is contested. Not a default for a plain early intro. [C3, C8] |
+| Plasma | Late/Modern Times | Distinguish color cycling, character-set, and FLI variants. Coarse blocks can be highly optimized effects; low resolution is not automatically early. [C1, C9] |
+| FPP / stretcher, twister, wave carpet | Late/Modern Times | Demanding raster/display manipulation; name the actual variant and period. [C1] |
+| Dot vectors, filled vectors, 3D scenes | Late/Modern Times; simple dots may precede | Few dots lean transitional; complex filled scenes are advanced. Drive-assisted computation needs its own profile disclosure. [C1] |
+| Artwork-integrated distortion, perspective, and geometry | Modern Times as composed showpieces | Use the observed portrait/pattern, perspective-floor, and geometry examples as visual directions, not proof of specific native techniques. Build a moving prototype with a feasible fallback. [Modern examples](modern-c64-examples.md) |
+| Motif transformations and storyboard transitions | Modern Times composition | Give a recurring image distinct roles across scenes; plan reveal, development, text, musical cue, and exit. This is scene composition, not a new VIC-II graphics mode. [Scene and motif guide](modern-c64-examples.md) |
 
 **Reusable C64 rasterbar color example:** Call this a *dithered rasterbar color ramp* or *dithered rasterbar colour table*: neighboring palette indices alternate on successive raster lines to soften each step, and the dark-to-white sequence mirrors back to dark. One author calls this line pattern “Poor Man's Dithering.” [C13] Adapt this illustrative blue table to the intended palette and bar height; it is not a canonical color order or proof of real VIC-II raster timing.
 
@@ -54,10 +67,11 @@ const C64_RASTER_COLORS = {
 
 const RASTER_BLUE = [0,6,0,6,6,14,6,14,14,3,14,3,3,1,3,1,1,1,3,1,3,3,14,3,14,14,6,14,6,6,0,6,0];
 
-### Executing a late C64 demo
+### Executing a polished C64 demo
 
+- **Modern Times storyboard:** Start from [modern C64 examples](modern-c64-examples.md) for scene cards, motif planning, text/music mapping, and whole-run review. For an ambitious multipart production, also use the [Edge of Disgrace calibration](edge-of-disgrace.md) and, when thematic continuity matters, [Eyes](eyes.md). Give each major scene one hero visual, composed typography/artwork, a musical cue, a designed entry and exit, a feasibility tier, and a fallback. Evaluate the whole sequence for contrast and recurring motifs. Do not infer a named VIC-II technique merely from the visual appearance of a reference recording.
 - **Characters and sprite art:** Design a prominent figure in three passes: (1) a silhouette and characteristic prop recognizable at actual output size, (2) a few clustered color areas that separate face, clothing, and prop, and (3) only the highlights or animation frames that remain legible in motion. The witch example is a pointed hat, broom, face/hair, and cloak, with restrained two-tone shading and a small two-frame change. A triangle-and-stick outline is too generic; gradients, intricate fabric trim, and tiny details that disappear at display size are too illustrative for this target. The 48×36 browser composition used for that example is a style reference, **not** a native C64 sprite specification or a mandatory size/color budget. Inspect both a still frame and motion at 1× output size before accepting the art. Historical multicolor sprites trade horizontal resolution for color (12×21 double-width pixels versus 24×21 in hires); describe a larger or richer browser figure as a possible multi-element composition, not one native sprite. [C5, C10]
-- **Scroller choreography:** A calm straight scroller may carry the intro. In a multipart late demo, plan visibly different motion or presentation later: sine/DYCP-style character motion, perspective, or multiple layers. Choose transitions and speed so every greeting is readable. A sine-wave browser scroller is only a visual DYCP reference unless it implements the relevant VIC-II/character-set technique. [C1, C4]
+- **Scroller choreography:** A calm straight scroller may carry the intro. In a multipart late or modern demo, plan visibly different motion or presentation later: sine/DYCP-style character motion, perspective, or multiple layers. Choose transitions and speed so every greeting is readable. A sine-wave browser scroller is only a visual DYCP reference unless it implements the relevant VIC-II/character-set technique. [C1, C4]
 - **Stable pixel art:** Use bitmap glyphs with clear edges instead of antialiased vector text at low resolution. Drive movement by time with sufficiently fine position increments; on larger browser displays consider a separate higher-resolution text layer. Design scroller entry and exit, such as edge masks, without clipping greetings. Prerender static pixel motifs at integer dimensions instead of rescaling them at varying subpixel positions every frame. Do not gratuitously coarsen pixel art: the C64 offers 320×200 hires bitmap and 160×200 multicolor bitmap, each with its own color constraints. Disclose freely inspired browser art that exceeds per-cell color limits. CRT treatment must not harm legibility or image stability. [C12]
 - **Raster bars:** Build thicker apparent bands from individually discernible raster lines; the color table creates the perceived light gradient. Check source resolution, CSS scaling, and CRT overlay so thin lines are not blurred or moiré-patterned. A reproduced color table or visible scanlines do not prove VIC-II raster timing. [C11]
 
@@ -65,8 +79,9 @@ Historical anchors: Honey's recollection of border experiments in 1986 [C6]; VSP
 
 Example combinations:
 
-- **Early:** Static logo, straight scroller, few stars, simple raster bars.
-- **Late:** DYCP or FPP scroller, dense sprite multiplexer, plasma, and FLI graphics in separate composed scenes. Choose only a profile-appropriate subset.
+- **Early / simple, through 1990:** Static logo, straight scroller, few stars, simple raster bars.
+- **Late / advanced, 1991–2000:** DYCP or FPP-style scroller, sprite multiplexing, plasma, and FLI graphics in separate scenes, selected to fit the specific reference year and target profile. Choose only a feasible subset.
+- **Modern Times / latest effects and storyboards, from 2001:** Distinct effect-led scenes plus custom art, integrated typography, music-led transitions, and optional recurring motifs; use the [modern examples and storyboard guide](modern-c64-examples.md), with [Edge of Disgrace](edge-of-disgrace.md) and [Eyes](eyes.md) as references. Verify every showpiece's technical path and fallback.
 
 ## Amiga 500 and Amiga 1200
 
@@ -100,7 +115,7 @@ Example combinations:
 
 ## Presenting suggestions
 
-For each suggested effect, briefly give **name – fit – chosen implementation**. Example: “FLD – transitional – one bouncing text band; historically possible before the late era.” If the user requests a late effect in an early demo, state the intentional mixture and implement it. Use the same method, with machine-specific sources, for other computers; do not transfer VIC-II or Amiga tricks unexamined.
+For each suggested C64 effect, briefly give **name – fit with the selected Early/Late/Modern Times phase – chosen implementation**. Add a historical technique note where needed, for example: “FLD – late-phase option – one bouncing text band; historically possible earlier in pioneering work.” If the user requests a more demanding effect in an early-style demo, state the intentional mixture and implement it if feasible. Use machine-specific periods and sources for other computers; do not transfer VIC-II or Amiga tricks unexamined.
 
 ## Sources and limits of claims
 
